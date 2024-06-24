@@ -1,0 +1,51 @@
+@use 'variables';
+
+$--color: (
+  'primary': (
+    'base': variables.$color-primary,
+  ),
+  'success': (
+    'base': variables.$color-success,
+  ),
+  'warning': (
+    'base': variables.$color-warning,
+  ),
+  'info': (
+    'base': variables.$color-info,
+  ),
+);
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: $--color,
+  $table: (
+    'border-color': variables.$color-primary,
+    'text-color': variables.$color-dark,
+    'header-text-color': variables.$color-green,
+    'header-bg-color': variables.$color-primary,
+  ),
+  $common-component-size: (
+    'default': 40px,
+  ),
+  $input: (
+    'text-color': variables.$color-text-input,
+    'border-radius': 4px,
+  ),
+  $pagination: (
+    'hover-color': variables.$color-green,
+    'bg-color': variables.$color-primary,
+    'button-width': 24px,
+    'button-height': 24px,
+    'border-radius': 50%,
+    'font-size': 12px,
+    'text-color': variables.$color-green,
+  ),
+  $menu: (
+    'text-color': variables.$color-dark,
+    'active-color': variables.$color-green,
+    'item-height': 40px,
+  ),
+  $dialog: (
+    'padding-primary': 20px,
+    'border-radius' : 20px
+  )
+);
